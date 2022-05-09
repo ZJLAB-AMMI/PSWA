@@ -16,7 +16,8 @@ if __name__ == '__main__':
     parser.add_argument(
         "--dir",
         type=str,
-        default="/home/GH/experiment/PSWA-CV/swa250-wideresnet-CIFAR10-pswa-lr1",
+        default=None,
+        required=True,
         help="training directory (default: None)",
     )
 
@@ -26,7 +27,8 @@ if __name__ == '__main__':
     parser.add_argument(
         "--data_path",
         type=str,
-        default="/home/GH/experiment",
+        default=None,
+        required=True,
         metavar="PATH",
         help="path to datasets location (default: None)",
     )
@@ -55,7 +57,8 @@ if __name__ == '__main__':
     parser.add_argument(
         "--model",
         type=str,
-        default="WideResNet28x10",
+        default=None,
+        required=True,
         metavar="MODEL",
         help="model name (default: None)",
     )
