@@ -37,10 +37,10 @@ python3 pswa.py \
  VGG16: 
  
  ```
- PSWA, CIFAR10
+CIFAR10
  python3 pswa.py --dir=<DIR> --data_path=<PATH> --dataset=CIFAR10 --model=VGG16 --epochs=160 --lr_init=0.05 \
                  --wd=5e-4 --pswa --pswa_start=40 --P=20
- PSWA, CIFAR100
+CIFAR100
  python3 pswa.py --dir=<DIR> --data_path=<PATH> --dataset=CIFAR100 --model=VGG16 --epochs=160 --lr_init=0.05 \
                  --wd=5e-4 --pswa --pswa_start=40 --P=20
  ```
