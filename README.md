@@ -1,1 +1,37 @@
 # PSWA
+This repository contains a PyTorch implementation of the Parsimonious Stochastic Weight Averaging(PSWA) procedures from the paper
+by Hao Guo, Jiyong Jin and Bin Liu.
+
+# Usage
+The code in this repository implements the Parsimonious Stochastic Weight Averaging (PSWA) algorithm, with examples on the CIFAR10 and CIFAR100 datasets.
+
+## PSWA Training
+You can train model using the following command
+
+```
+python3 pswa.py \
+        --dir=<DIR> \
+        --dataset=<DATASET> \
+        --data_path=<PATH> \
+        --model=<MODEL> \
+        --epochs=<EPOCHS> \
+        --lr_init=<LR> \
+        --wd=<WD> \
+        --pswa \
+        --pswa_start=<PSWA_START> \
+        --P=<P> 
+ ```
+ 
+ Parameters: \
+ ```DIR``` — path to training directory where checkpoints will be stored \
+```DATASET``` —  dataset name (default: CIFAR10) \
+```PATH``` — path to the data directory \
+```MODEL``` — DNN model name: VGG16, PreResNet164 and WideResNet28x10 \
+```EPOCHS``` — number of training epochs \
+```LR``` — initial learning rate \
+```WD``` — weight decay \
+```PSWA_START``` — the number of epoch after which PSWA will start to average models (default: 40) \
+```P``` — model recording period(default:20)
+     
+        
+        
