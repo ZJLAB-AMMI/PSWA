@@ -12,7 +12,7 @@ import data, models, utils, losses
 from copy import deepcopy
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="SGD/SWA training")
+    parser = argparse.ArgumentParser(description="PSWA training")
     parser.add_argument(
         "--dir",
         type=str,
