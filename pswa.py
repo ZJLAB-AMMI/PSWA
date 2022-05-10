@@ -125,7 +125,7 @@ if __name__ == '__main__':
         type=float,
         default=40,
         metavar="N",
-        help="SWA start epoch number (default: 40)",
+        help="PSWA start epoch number (default: 40)",
     )
     parser.add_argument(
         "--swa_lr", type=float, default=0.01, metavar="LR", help="SWA LR (default: 0.02)"
