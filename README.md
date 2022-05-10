@@ -1,9 +1,8 @@
 # PSWA
-This repository contains a PyTorch implementation of the Parsimonious Stochastic Weight Averaging(PSWA) procedures from the paper
-by Hao Guo, Jiyong Jin and Bin Liu.
+This repository contains a PyTorch implementation of the periodic Stochastic Weight Averaging(PSWA) procedures described in the paper "Stochastic Weight Averaging Revisited" by Hao Guo, Jiyong Jin and Bin Liu (https://arxiv.org/abs/2201.00519). 
 
 # Usage
-The code in this repository implements the Parsimonious Stochastic Weight Averaging (PSWA) algorithm, with examples on the CIFAR10 and CIFAR100 datasets.
+The code in this repository implements the periodic Stochastic Weight Averaging (PSWA) algorithm, with examples on the CIFAR10 and CIFAR100 datasets.
 
 ## PSWA Training
 You can train model using the following command
