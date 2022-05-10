@@ -243,7 +243,7 @@ if __name__ == '__main__':
 
     columns = ["ep", "lr", "tr_loss", "tr_acc", "te_loss", "te_acc", "time"]
     if args.swa:
-        columns = columns[:-2] + ["swa_te_loss", "swa_te_acc"] + columns[-2:]
+        columns = columns[:-1] + ["swa_te_loss", "swa_te_acc"] + columns[-1:]
         swa_res = {"loss": None, "accuracy": None}
         train_res1 = {"loss": None, "accuracy": None}
 
@@ -281,7 +281,7 @@ if __name__ == '__main__':
             test_res = utils.eval(loaders["test"], model, criterion, cuda=use_cuda)
 
 
-        if (epoch + 1) == args.swa_pstart:
+        if (epoch + 1) == args.pswa_start:
             utils.save_checkpoint(
                 args.dir,
                 epoch + 1,
@@ -353,7 +353,7 @@ if __name__ == '__main__':
             time_ep
         ]
         if args.swa:
-            values = values[:-2] + [swa_res["loss"], swa_res["accuracy"]] + values[-2:]
+            values = values[:-1] + [swa_res["loss"], swa_res["accuracy"]] + values[-1:]
         table = tabulate.tabulate([values], columns, tablefmt="simple", floatfmt="8.4f")
         if epoch % 40 == 0:
             table = table.split("\n")
